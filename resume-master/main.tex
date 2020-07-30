@@ -1,0 +1,195 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Current template author:
+% Dana Seidel (danaseidel.com)
+% 
+% SIGNIFICANT CHANGES HAVE BEEN MADE TO THE ORIGINAL TEMPLATE
+% including but not limited to:
+% % inclusion of fontawesome icons
+% % movement of AWARDS section
+% % addition of a short bio and creation of a CONTACT section
+%
+%%%%%%%%%%%%%%%%%%%%%
+% ORIGINAL TEMPLATE INFO
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original Template author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original Template repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4]{deedy-resume-openfont}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{}{Avantika Mudumbai}{
+\urlstyle{same}\url{https://gitlab.com/avantikaaa} \\ % Your website, LinkedIn profile or other web address
+\href{mailto:avantika.mudumbai@iiitb.org}{avantika.mudumbai@iiitb.org} | +91 8179640318 % Your contact information
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.32\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Contact
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contact} 
+\href{mailto:avantika.mudumbai@iiitb.org}{\faEnvelope{ avantika.mudumbai@iiitb.org}} \\
+%\hspace{2pt} 
+\href{https://www.linkedin.com/in/avantika-mudumbai-ba31171a6//}{\faLinkedinSquare{ Avantika Mudumbai}}\\
+\href{https://gitlab.com/avantikaaa}{\faGithub{ avantikaaa}} \\
+\href{https://twitter.com/__avantika}{\faTwitter{ @\_\_avantika}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education} 
+\subsection{International Institute of Information \\Technology}
+\descript{Bangalore\\Integrated MTech in CSE\\2019 - Present}
+\location{CGPA: 3.25/4}
+\sectionsep
+
+\subsection{Fiitjee Junior College}
+\descript{Hyderabad\\Senior Secondary Education\\2017-2019}
+\location{TSBIE: 92\%}
+\sectionsep
+
+\subsection{Chirec International}
+\descript{Hyderabad\\Highschool\\2015-2017}
+\location{CGPA: 10/10}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\textbullet{} R \textbullet{} Data Analysis \textbullet{} Tidyverse \\\textbullet{} Geospatial Analysis (R, Python, ArcGIS) \\\textbullet{} Version Control, Git/Github \\\textbullet{} Data Visualization \textbullet{} Biostatistics \\\textbullet{} Regression Analysis \textbullet{} Open Science \\\textbullet{} Experimental Design \textbullet{} Teaching \\\textbullet{} R Markdown \textbullet{} LaTeX \textbullet{} Shiny \\\textbullet{} Open Source Development in R \\ \textbullet{} Web Development \textbullet{} SQL 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+
+\textbullet{} Data Science for the 21st Century: National Science Foundation Research Traineeship (\$32K, 2015-2017) \\
+\textbullet{} Outstanding Graduate Student Instructor Award, UC Berkeley 2018\\
+\textbullet{} Letter of Commendation for Excellence in Teaching, Univ. of Alberta 2012\\
+% \textbullet{} MEC Community Involvement Research Award (\$18K) 
+% \textbullet{} Alberta Emerald Foundation Shared Footprints Award 2013
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+For full list of my publications, please see \href{https://scholar.google.com/citations?user=0BKLXCUAAAAJ}{Google Scholar \faGraduationCap} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{RStudio}
+\descript{| Software Development Intern \textbullet{} Tidyverse Team}
+\location{June 2018 – Aug 2018 | Remote}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Participated in open source R development for \href{https://github.com/tidyverse/ggplot2}{ggplot2 \faGithub{}} (486K downloads/month) and \href{https://github.com/r-lib/scales}{scales \faGithub} packages
+\item Learned the internals of a large existing codebase to resolve issues, submit bug fixes, add new features, write tests, and update documentation to provide better functionality for user-defined scales, themes, and aesthetics manipulation during data visualization in R. 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Google}
+\descript{| Quantitative Analyst Intern \textbullet{} GeoData Analytics Team}
+\location{May 2016 – Aug 2016 | Mountain View, CA}
+\begin{tightemize}
+\item Explored impressions data for millions of features in the Google Maps database using Dremel, R
+\item Assessed average time to impressions maturity for novel business features using hazard models.
+\item Fit mixed effect regression models and evaluated model capacity for predicting impressions of novel business features based upon spatial relations with mature features.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\descript{Graduate Student Researcher | UC Berkeley % \href{https://ourenvironment.berkeley.edu/people/dana-seidel}{\faGlobe}
+}
+\location{} % adjusts the text size below to match
+\begin{tightemize}
+% \item Combined, cleaned, \& analyzed spatial temporal time series data from 39 collared elephants, 2M cleaned GPS samples.
+\item Developed an R package to streamline best practices in exploratory data analysis for animal movement data.
+\item Developed an R Shiny application for updating spatial risk maps of infectious disease using rare events logistic regression \& spatial libraries in Python and R. \href{https://fw-habitat-aep.shinyapps.io/ABCWD_Shiny/}{\faGlobe} \href{https://github.com/dpseidel/ABCWD_Shiny}{\faGithub}
+\item Built spatiotemporal models estimating disease prevalence and spread using a hierarchical Bayesian framework in WinBUGs and R.\\
+\end{tightemize}
+\descript{\href{http://www.biology.ualberta.ca/www.montaneelk.com/index.php}{Southwest Alberta Montane Research Project \faGlobe}}
+\location{} % adjusts the text size below to match
+\begin{tightemize}
+\item Designed database and analysis flow for foraging \& movement data from 182 radio-collared elk - totaling 856K cleaned GPS samples.
+\item Implemented multivariate regression analyses in R, including mixed negative binomial regression and paired conditional logistic regression 
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Teaching
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teaching}
+\descript{Visiting Instructor | Hong Kong University} \location{January 2018 | Movement Ecology in R Workshop}
+ Co-developed and led an 8-day workshop teaching ecological methods of spatial and movement analysis in R \& RStudio. \href{https://www.danaseidel.com/MovEco-R-Workshop/}{\faGlobe} \href{https://github.com/dpseidel/MovEco-R-Workshop/}{\faGithub} 
+ %\sectionsep
+\vspace{4pt}
+
+\descript{Data Science Instructor | UC Berkeley} \location{Fall 2017 ESPM 157 \textbullet{} Spring 2018 ESPM 288}
+ Taught upper division course teaching collaborative \& reproducible data science including programming in R \& RStudio, relational databases, data management, version control, remote data and APIs, cloud computing, \& R Markdown. \href{https://espm-288.carlboettiger.info/}{\faGlobe} \href{https://github.com/ds421}{\faGithub}
+%\sectionsep
+\vspace{4pt}
+
+\descript{Biostatistics Instructor | UC Berkeley}	 \location{Fall 2015 ESPM 173}
+Taught upper division biostatistics course including basic hypothesis testing, probability, experimental design, linear models, and programming in R \& RStudio.
+\end{minipage} 
+\end{document}  \documentclass[]{article}

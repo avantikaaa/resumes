@@ -1,0 +1,248 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+% * esben
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the cvsecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/cvSecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[a4paper]{fortysecondscv}
+
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+	% \newfontfamily\headingfont[Path=fonts/]{segoeuib.ttf} % use local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+\fi
+
+% use a sans serif font as default
+\usepackage[sfdefault]{ClearSans}
+% \usepackage[sfdefault]{noto}
+
+
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{Avantika \\Mudumbai}
+% job title/career
+%\cvjobtitle{Panda Scientist,\\[0.2em] Panda of the Year}
+
+%% optional information
+% profile picture
+\cvprofilepic{pics/picture2.jpg}
+% logo picture
+%\cvlogopic{pics/logo_txt.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+%\cvbirthday{\today}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{avantika.mudumbai@iiitb.org}
+% phone number
+\cvphone{+91 8179640318}
+% personal website
+\cvsite{https://gitlab.com/avantikaaa}
+% email address
+%\cvmail{panda@bamboo.cn}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+%\cvcustomdata{\faFlag}{Chinese}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	\graphicspath{{pics/flags/shiny/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{About me}
+	{I am a dedicated, organised undergraduate in IIIT Bangalore. I am very keen and willing to learn and develop new skills. I have an active and a dynamic approach to my work. I can work under pressure and also adhere to strict deadlines.}
+	\profilesection{Language Skills}
+		\pointskill{}{Python}{3}
+		\pointskill{}{C}{4}
+		\pointskill{}{C++}{2}
+		\pointskill{}{Java}{2}
+		\pointskill{}{Verilog}{2}
+		\pointskill{}{Arduino}{1}
+	
+	\profilesection{Technologies}
+		\skill{}{LaTeX}
+		\skill{}{Git}
+		\skill{}{Linux}
+		\skill{}{Pelican}
+
+	\profilesection{Find me on}
+		\begin{icontable}{2.5em}{1em}
+			\social{\faGitlab}
+				{https://gitlab.com/avantikaaa}
+				{avantikaaa}
+			\social{\faLinkedin}
+				{https://www.linkedin.com/in/avantika-mudumbai-ba31171a6/}
+				{Avantika Mudumbai}
+			\social{\faTwitter}
+				{https://twitter.com/__avantika}
+				{@\_\_avantika}
+		\end{icontable}
+}
+
+
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Education}
+\begin{cvtable}[1.5]
+  \cvitem
+    {2019-Present}
+    {Integrated MTech in Computer Science Engineering}
+    {CGPA  : 3.25/4}
+    {International Institute of Information Technology\\Bangalore}
+  \cvitem
+    {2017-2019}
+    {Senior Secondary Education}
+    {TSBIE :    92\%}
+    {Fiitjee Junior College\\Hyderabad}
+  \cvitem
+    {2015-2017}
+    {Highschool}
+    {CGPA  : 10/10}
+    {Chirec International\\Hyderabad}
+\end{cvtable}
+
+
+\section{Projects}
+\begin{cvtable}
+  \cvitem
+    {C}
+    {\href{https://gitlab.com/avantikaaa/hospital-records-management-system}{Hospital Records Management System}}    
+    {Group project}
+    {The project lets you add, delete, update a patient's diagnosis. You can also search for patients on the basis of various parameters like diagnosis, blood group, age, etc.\\}
+
+  \cvitem
+    {Python}
+    {\href{https://gitlab.com/avantikaaa/socket-programming}{Socket Programming}}
+    {Individual}
+    {The game is an implementation of basic client-server interaction in the form of a simple quiz. This quiz requires one server and 3 players. This game also has the implementation of the buzzer feature.\\}
+
+  \cvitem
+    {Flutter}
+    {fooDIE (on-going)}
+    {Group project}
+    {The app notifies the user prior to the expiry date of food items. This app provides additional features like a weekly planner or recipe suggestions for selected items.}\\
+    
+  \cvitem
+  	{Python}
+  	{\href{https://gitlab.com/avantikaaa/game-of-life}{Game of Life}}
+  	{Individual}
+  	{The project is based on John Conway's Game of Life. This implements the rules on a simple, fixed-sized grid with a shape chosen by the user(from a given set of shapes).\\}
+  
+  \cvitem
+  	{Arduino}
+  	{Line following robot}
+  	{Individual}
+  	{Made a line following robot using an arduino and IR sensors.\\}
+\end{cvtable}
+
+
+\cvsection{MOOC}
+\begin{cvtable}
+	\cvitem
+		{On-going}
+		{Introduction to International Criminal Law}
+		{Coursera}
+		{Case Western Reserve University}
+
+	\cvitem
+		{June 2020}
+		{\href{https://www.coursera.org/account/accomplishments/certificate/ZCBH4JE34ES4}{Python Data Structures}}
+		{Coursera}
+		{University of Michigan}
+
+	\cvitem
+		{May 2020}
+		{\href{https://www.coursera.org/account/accomplishments/certificate/FYVZ79HDRVE4}{Introduction to Physical Chemistry}}
+		{Coursera}
+		{University of Manchester}
+\end{cvtable}
+
+\section{Achievements}
+\begin{cvtable}
+  \cvitem
+  	{2020-Present}
+    {Women Techmakers Engineering Fellows Scholar}
+    {}
+    {Among the 126 candidates selected for the Women Techmakers Engineering Fellows Program. This program is facilitated by TalentSprint, supported by Google, for women engineers.\\}
+    
+  \cvitem
+  	{April 2019}
+  	{Joint Entrance Examination 2019}
+  	{AIR: 8718}
+  	{Among the top 0.75\% canditates in JEE paper I (B.E/B Tech.) 2019 out of 13 lakh candidates.\\}
+
+  \cvitem
+  	{April 2019}
+  	{Joint Entrance Examination 2019}
+  	{AIR: 1888}
+  	{Among the top 0.733\% candidates in JEE paper II (B Arch) 2019 out of 2 lakh candidates.\\}
+\end{cvtable}
+
+
+\end{document}
